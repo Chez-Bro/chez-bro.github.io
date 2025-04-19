@@ -1,0 +1,66 @@
+body {
+  border: 5px;
+}
+
+p {
+  color: black;
+}
+
+h1 {
+  border-bottom:1px solid #888;
+}
+
+h2 {
+  font-size:1.5em;
+  margin-bottom:.5em;
+  border-bottom:1px solid #888
+}
+
+code {
+  border: 1px solid black;
+  border-radius: 4px;
+  font-family:monospace;
+  background: LightBlue;
+  padding:.15em .25em
+}
+
+pre {
+  font-family:monospace,monospace;
+  border:1px solid #bdb;
+  background:#dfd;
+  padding:.5em;
+  margin:1em;
+}
+
+/* Initialize the counter for h1 */
+body {
+  counter-reset: section; /* Start the main counter */
+}
+
+/* Title - h1 */
+h1 {
+  color: red;
+}
+
+/* Heading - h2 */
+h2 {
+  color: blue;
+  counter-increment: section; /* Increment the main counter */
+}
+
+h2::before {
+  content: counter(section) ". "; /* Add the number before h2 */
+  color: purple; /* Change the color of the number */
+}
+
+/* Subheading - h3 */
+h3 {
+  color: green;
+  counter-increment: subsection; /* Increment the subheading counter */
+  counter-reset: subsection; /* Reset subsection counter when a new h2 starts */
+}
+
+h3::before {
+  content: counter(section) "." counter(subsection) " "; /* Add main and subheading number */
+  color: orange; /* Change the color of the number */
+}
