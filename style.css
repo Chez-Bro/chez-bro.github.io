@@ -2,8 +2,6 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   background: linear-gradient(180deg, #191A1C);
   color: #BFBBB6;
-  min-height: 100vh;
-  margin: 5vh 5vw;
   animation-name: lol;
   animation-duration: 3s;
 }
