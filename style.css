@@ -1,16 +1,28 @@
 body {
-  font-family: Arial, sans-serif;
-  color: black;
-}
-
-h1 {
-  border-bottom:1px solid #888;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  counter-reset: section;
 }
 
 h2 {
+  font-weight: normal;
   font-size:1.5em;
   margin-bottom:.5em;
-  border-bottom:1px solid #888
+  border-bottom:1px solid #888;
+  counter-reset: subsection;
+}
+
+h2::before {
+  counter-increment:section;
+  content:counter(section)" ";
+  color: brown;
+  font-style: italic;
+}
+
+h3::before {
+  counter-increment: subsection;
+  content: counter(section)"."counter(subsection)" ";
+  color: orange;
+  font-style: italic;
 }
 
 code {
@@ -27,37 +39,4 @@ pre {
   background:#dfd;
   padding:.5em;
   margin:1em;
-}
-
-/* Initialize the counter for h1 */
-body {
-  counter-reset: section; /* Start the main counter */
-}
-
-/* Title - h1 */
-h1 {
-  color: red;
-}
-
-/* Heading - h2 */
-h2 {
-  color: blue;
-  counter-increment: section; /* Increment the main counter */
-}
-
-h2::before {
-  content: counter(section) ". "; /* Add the number before h2 */
-  color: purple; /* Change the color of the number */
-}
-
-/* Subheading - h3 */
-h3 {
-  color: green;
-  counter-increment: subsection; /* Increment the subheading counter */
-  counter-reset: subsection; /* Reset subsection counter when a new h2 starts */
-}
-
-h3::before {
-  content: counter(section) "." counter(subsection) " "; /* Add main and subheading number */
-  color: orange; /* Change the color of the number */
 }
