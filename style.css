@@ -8,10 +8,12 @@ html {
   }
 }
 
-.main {
+div.main {
   border: 1px solid grey;
   display: block;
   padding: 2em;
+  max-width: 50em;
+  margin: auto;
 }
 
 body {
