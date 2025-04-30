@@ -1,6 +1,22 @@
+html {
+  font-size: clamp(14px, 1vw, 24px);
+}
+
+@media (min-width: 1000px) {
+  html {
+    font-size: clamp(16px, 1vw, 24px);
+  }
+}
+
+.main {
+  border: 1px solid grey;
+  display: block;
+  padding: 2em;
+}
+
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background: linear-gradient(180deg, #191A1C);
+  background-color: #191A1C;
   color: #BFBBB6;
   animation-name: lol;
   animation-duration: 3s;
@@ -15,12 +31,14 @@ body {
 }
 
 a {
-  background: grey;
+  margin-left: -10px;
+}
+
+.button {
   color: white;
-  padding: 0.3em;
-  border-radius: 8px;
+  padding: 0.4em 0.5em;
 }
 
 h1 {
-  
+  text-align: center;
 }
